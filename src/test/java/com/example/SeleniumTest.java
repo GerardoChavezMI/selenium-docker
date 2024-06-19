@@ -15,9 +15,13 @@ public class SeleniumTest{
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--remote-debugging-port=9222");
         options.addArguments("--disable-gpu");
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
         driver.get("https://www.google.com");
         System.out.println("Page title is: " + driver.getTitle());
         driver.close();
+    }
+    @Test
+    public void testGoogleSearchTest() {
+
     }
 }
